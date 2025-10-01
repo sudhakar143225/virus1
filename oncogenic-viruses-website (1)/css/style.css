@@ -1,0 +1,52 @@
+*{box-sizing:border-box;margin:0;padding:0;font-family:Georgia,'Times New Roman',serif}
+body{background:#fafafa;color:#102a43;line-height:1.65}
+.container{max-width:1000px;margin:0 auto;padding:1.2rem}
+header{background:#0b5fa5;color:#fff;padding:.9rem 0;position:sticky;top:0;z-index:50}
+header .container{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-weight:700;font-size:1.2rem;text-decoration:none;color:#fff}
+nav ul{display:flex;gap:.6rem;list-style:none;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;padding:.45rem .7rem;border-radius:6px;font-weight:600}
+nav a.active,nav a:hover{background:rgba(255,255,255,0.12)}
+.hero{background:#fff;padding:2rem;border-radius:8px;margin-top:1rem;display:flex;gap:1rem;align-items:center}
+.hero img{width:45%;border-radius:8px;object-fit:cover;box-shadow:0 10px 30px rgba(16,42,67,0.08)}
+.hero .lead{width:55%}
+.hero h1{color:#022b47;margin-bottom:.6rem;font-family:Arial,Helvetica,sans-serif}
+.hero p{color:#214a66;font-size:1rem}
+.article{background:#fff;padding:1.25rem;border-radius:8px;margin-top:1rem;box-shadow:0 8px 24px rgba(16,42,67,0.04)}
+.article h2{color:#0b5fa5;margin-bottom:.6rem}
+.article img{width:100%;border-radius:6px;margin-top:.7rem;display:block}
+.virus-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem}
+.virus-card{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 6px 18px rgba(2,48,71,0.04)}
+.virus-card h3{color:#01345a;margin-bottom:.35rem}
+.byline{font-style:italic;color:#395b71;margin-top:.6rem}
+footer{margin-top:2rem;padding:1rem 0;text-align:center;color:#fff;background:#0b5fa5;border-radius:6px}
+a.inline{color:#0b5fa5;text-decoration:none;font-weight:600}
+.back-link{color:#fff;text-decoration:none;font-weight:600}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container { padding: 0.8rem; }
+  header .container { flex-direction: column; align-items: flex-start; }
+  .logo { font-size: 1rem; }
+  nav ul { flex-direction: column; gap: 0.4rem; width: 100%; }
+  nav a { display: block; padding: 0.5rem; }
+  .hero { flex-direction: column; text-align: center; }
+  .hero img { width: 100%; }
+  .hero .lead { width: 100%; }
+  .virus-list { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 0.9rem; }
+  .hero { padding: 1rem; }
+  .article { padding: 1rem; }
+}
+
+/* Enhancements */
+nav a { transition: background-color 0.3s ease; }
+.article { transition: box-shadow 0.3s ease; }
+.article:hover { box-shadow: 0 12px 32px rgba(16,42,67,0.08); }
+.hero img { transition: transform 0.3s ease; }
+.hero img:hover { transform: scale(1.02); }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+h1, h2, h3 { font-family: 'Arial', sans-serif; }
